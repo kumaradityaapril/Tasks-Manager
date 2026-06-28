@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import taskRoutes from "./routes/taskRoutes.js";
 import connectDB from "./config/db.js";
 import dns from'dns'
+import errorHandler from "./middleware/errorMiddleware.js";
 
 dns.setServers(["1.1.1.1","8.8.8.8"])
 
@@ -18,12 +19,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/tasks", taskRoutes);
+app.use(errorHandler);
 
 // Health Check Route
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
     message: "Task Tracker Backend is Running!"
+  });
+});
+
+app.use("*", (req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "Route Not Found",
   });
 });
 
