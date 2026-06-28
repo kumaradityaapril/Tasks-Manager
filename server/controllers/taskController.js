@@ -18,21 +18,75 @@ export const createTask = async (req, res) => {
 };
 
 export const getTasks = async (req, res) => {
+
+    try {
+
+        const { search } = req.query;
+
+        let filter = {};
+
+        if (search) {
+
+            filter.title = {
+
+                $regex: search,
+
+                $options: "i"
+
+            };
+
+        }
+
+        const tasks = await Task.find(filter);
+
+        res.status(200).json({
+
+            success: true,
+
+            count: tasks.length,
+
+            data: tasks
+
+        });
+
+    }
+
+    catch(error){
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
+    }
+
+};
+export const getTaskById = async (req, res) => {
   try {
-    const tasks = await Task.find().sort({
-      createdAt: -1,
-    });
+    const task = await Task.findById(req.params.id);
+
+    if (!task) {
+      return res.status(404).json({
+        success: false,
+        message: "Task not found"
+      });
+    }
 
     res.status(200).json({
       success: true,
-      count: tasks.length,
-      data: tasks,
+      data: task
     });
+
   } catch (error) {
+
     res.status(500).json({
       success: false,
-      message: error.message,
+      message: error.message
     });
+
   }
 };
 
@@ -88,4 +142,4 @@ export const deleteTask = async (req, res) => {
       message: error.message,
     });
   }
-};
+};                                                                                                                                                                               
