@@ -1,22 +1,22 @@
-# TaskPro 🚀 (MERN Task Management System)
+# TaskPro (MERN Task Management System)
 
 TaskPro is a professional, high-density, corporate-modern task management application. The project is built using the **MERN** stack (MongoDB, Express, React, Node.js) with a custom vanilla CSS design system that targets project managers and power users who require a low-friction data-heavy administrative interface.
 
 ---
 
-## ✨ Features
+##  Features
 
-- **📊 Real-time Dashboard**: Live counters tracking Total, Pending, and Completed tasks with dynamic status indicators.
-- **⚡ Quick Add Task**: Create tasks instantly from the home dashboard overview page.
-- **📋 All Tasks Listing**: Advanced filters (Status, Priority, and Due Date) paired with dynamic search, pagination, and a CSV export utility.
-- **🛹 Workspace Kanban Board**: Drag-and-drop styled column layout (Pending, In Progress, Completed) to track cards.
-- **🏷️ Smart Icons**: Tasks are dynamically represented by semantic category icons (documents, servers, UI, SEO, team) depending on title keywords.
-- **🌓 Adaptive Theme**: Fully implemented appearance controls supporting Light and Dark modes.
-- **🔔 Notifications & Settings**: Toggles for notification configurations and language selection (simulated).
+- ** Real-time Dashboard**: Live counters tracking Total, Pending, and Completed tasks with dynamic status indicators.
+- ** Quick Add Task**: Create tasks instantly from the home dashboard overview page.
+- ** All Tasks Listing**: Advanced filters (Status, Priority, and Due Date) paired with dynamic search, pagination, and a CSV export utility.
+- ** Workspace Kanban Board**: Drag-and-drop styled column layout (Pending, In Progress, Completed) to track cards.
+- ** Smart Icons**: Tasks are dynamically represented by semantic category icons (documents, servers, UI, SEO, team) depending on title keywords.
+- ** Adaptive Theme**: Fully implemented appearance controls supporting Light and Dark modes.
+- ** Notifications & Settings**: Toggles for notification configurations and language selection (simulated).
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **Framework**: React 19 (Vite)
@@ -32,7 +32,7 @@ TaskPro is a professional, high-density, corporate-modern task management applic
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 Tasks-Manager/
@@ -56,7 +56,7 @@ Tasks-Manager/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Prerequisites
 Make sure you have [Node.js](https://nodejs.org/) (v18+) and [npm](https://www.npmjs.com/) installed.
@@ -104,7 +104,7 @@ cd Tasks-Manager
 
 ---
 
-## 🌐 API Endpoints
+##  API Endpoints
 
 The backend exposes the following REST routes under `/api/tasks`:
 
@@ -118,7 +118,7 @@ The backend exposes the following REST routes under `/api/tasks`:
 
 ---
 
-## ☁️ Deployment
+##  Deployment
 
 ### Backend (Render)
 - **Service Type**: Web Service (Node)
@@ -138,5 +138,5 @@ The backend exposes the following REST routes under `/api/tasks`:
 
 ---
 
-## 🧑‍💻 Author
+##  Author
 - **Kumar Aditya** - *Initial Work & Architecture*
