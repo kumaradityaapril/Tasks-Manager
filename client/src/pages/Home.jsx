@@ -315,7 +315,6 @@ const Home = () => {
                   <div className="stat-info">
                     <span className="stat-label">Total Tasks</span>
                     <span className="stat-val">{totalTasksCount}</span>
-                    <span className="stat-trend positive">↗ +12% from last week</span>
                   </div>
                   <div className="stat-icon">
                     <FiCheckSquare />
@@ -326,9 +325,6 @@ const Home = () => {
                   <div className="stat-info">
                     <span className="stat-label">Pending</span>
                     <span className="stat-val">{pendingCount}</span>
-                    <span className="stat-trend negative" style={{ color: "var(--error)" }}>
-                      ⚠ {overdueCount} overdue items
-                    </span>
                   </div>
                   <div className="stat-icon red">
                     <FiClock />
@@ -339,7 +335,6 @@ const Home = () => {
                   <div className="stat-info">
                     <span className="stat-label">Completed</span>
                     <span className="stat-val">{completedCount}</span>
-                    <span className="stat-trend positive">✓ High efficiency rate</span>
                   </div>
                   <div className="stat-icon green">
                     <FiCheckCircle />
